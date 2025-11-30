@@ -14,53 +14,53 @@ export default function Quiz() {
 
   const questions = [
     {
-      text: "Which of these destinations is known for its beautiful beaches and tropical climate?",
-      image: "/boat.png",
-      options: [
-        { label: "Hawaii, USA", value: "hawaii", correct: true },
-        { label: "Bali, Indonesia", value: "bali", correct: true },
-        { label: "Paris, France", value: "paris", correct: false },
-        { label: "Kyoto, Japan", value: "kyoto", correct: false },
-      ],
-    },
-    {
-      text: "Which mode of transport is typically the fastest for long distances?",
-      image: "/aeroplane.png",
+      text: "What is the fastest way to travel from New York to London?",
+      image: "/plane.png",
       options: [
         { label: "Car", value: "car", correct: false },
-        { label: "Coach", value: "coach", correct: false },
+        { label: "Train", value: "train", correct: false },
+        { label: "Plane", value: "plane", correct: true },
         { label: "Boat", value: "boat", correct: false },
-        { label: "Airplane", value: "airplane", correct: true },
       ],
     },
     {
-      text: "What is the best way to travel between cities in Europe for comfort and speed?",
-      image: "/coach.png",
+      text: "What is the fastest way to travel from Tokyo to Osaka?",
+      image: "/train.png",
       options: [
+        { label: "Car", value: "car", correct: false },
         { label: "Train", value: "train", correct: true },
-        { label: "Car", value: "car", correct: false },
+        { label: "Plane", value: "plane", correct: false },
         { label: "Boat", value: "boat", correct: false },
-        { label: "Airplane", value: "airplane", correct: false },
       ],
     },
     {
-      text: "Which vehicle is most suitable for a scenic road trip across the countryside?",
+      text: "What is the fastest way to travel from Sydney to Melbourne?",
+      image: "/plane.png",
+      options: [
+        { label: "Car", value: "car", correct: false },
+        { label: "Train", value: "train", correct: false },
+        { label: "Plane", value: "plane", correct: true },
+        { label: "Boat", value: "boat", correct: false },
+      ],
+    },
+    {
+      text: "What is the fastest way to travel from Rio de Janeiro to Sao Paulo?",
+      image: "/train.png",
+      options: [
+        { label: "Car", value: "car", correct: false },
+        { label: "Train", value: "train", correct: true },
+        { label: "Plane", value: "plane", correct: false },
+        { label: "Boat", value: "boat", correct: false },
+      ],
+    },
+    {
+      text: "What is the fastest way to travel from Cape Town to Johannesburg?",
       image: "/car.png",
       options: [
         { label: "Car", value: "car", correct: true },
-        { label: "Coach", value: "coach", correct: false },
+        { label: "Train", value: "train", correct: false },
+        { label: "Plane", value: "plane", correct: false },
         { label: "Boat", value: "boat", correct: false },
-        { label: "Airplane", value: "airplane", correct: false },
-      ],
-    },
-    {
-      text: "Which of these is a popular cruise destination?",
-      image: "/boat.png",
-      options: [
-        { label: "Caribbean", value: "caribbean", correct: true },
-        { label: "Alps", value: "alps", correct: false },
-        { label: "Sahara", value: "sahara", correct: false },
-        { label: "Amazon", value: "amazon", correct: false },
       ],
     },
   ];
