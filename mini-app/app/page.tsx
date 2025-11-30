@@ -7,7 +7,7 @@ export { generateMetadata };
 export default function Home() {
   // NEVER write anything here, only use this page to import components
   return (
-    <main className="flex flex-col gap-3 place-items-center place-content-center px-4 grow" style={{ backgroundImage: "url('/boat.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <main className="flex flex-col gap-3 place-items-center place-content-center px-4 grow" style={{ backgroundImage: "url('/plane.png'), url('/car.png'), url('/boat.png'), url('/train.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       <h1 className="text-3xl font-bold mb-4">Holiday Travel Quiz</h1>
       <Quiz />
     </main>
