@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 export default function Quiz() {
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
+  const [feedback, setFeedback] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [leaderboard, setLeaderboard] = useState([
     { name: "Alice", score: 3 },
     { name: "Bob", score: 2 },
@@ -68,8 +70,12 @@ export default function Quiz() {
   const currentQuestion = questions[current];
 
   const handleSelect = (option: typeof currentQuestion.options[0]) => {
+    setSelectedOption(option.value);
     if (option.correct) {
       setScore(score + 1);
+      setFeedback("Correct! +1 point");
+    } else {
+      setFeedback("Incorrect.");
     }
     if (current < questions.length - 1) {
       setCurrent(current + 1);
@@ -99,6 +105,9 @@ export default function Quiz() {
           </Button>
         ))}
       </div>
+      {feedback && (
+        <p className={feedback.startsWith("Correct") ? "text-green-600" : "text-red-600"}>{feedback}</p>
+      )}
       {current === questions.length && (
         <div className="mt-4">
           <p className="text-green-600">
@@ -112,6 +121,9 @@ export default function Quiz() {
               </li>
             ))}
           </ul>
+          <a href={`https://twitter.com/intent/tweet?text=I scored ${score} out of ${questions.length} on the Travel Quiz!`} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline mt-2 block">
+            Share on X
+          </a>
         </div>
       )}
     </div>
